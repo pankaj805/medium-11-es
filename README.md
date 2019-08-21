@@ -1,2 +1,2 @@
-# medium-00_boiler_with_db
-A rest api boiler plate with db, request and response handler
+# medium-11-es
+This project is made to provide sample code for a medium article
