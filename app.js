@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import user from './routes/user';
 import {MongoClient} from 'mongodb';
 import {clientApiKeyValidation} from './common/authUtils';
+import play from './routes/play';
 
 const CONN_URL = 'mongodb://localhost:27017';
 let mongoClient = null;
@@ -32,6 +33,7 @@ app.get('/',(req,res,next)=>{
 });
 
 app.use('/user',user);
+app.use('/play',play);
 
 app.use((req, res, next) => {
     if (!res.data) {
